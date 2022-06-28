@@ -29,3 +29,16 @@
 
 - [nvm](https://github.com/nvm-sh/nvm)
 - [n](https://github.com/tj/n)
+Install
+```sh
+npm i -g n
+```
+Install the latest Node.js version
+```sh
+n install lts
+```
+
+## Create the project
+```sh
+npm create vite@latest
+```
