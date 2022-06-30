@@ -4,12 +4,15 @@ export function App() {
 
   return (
     <div>
-      <h1>Hello World!</h1>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post 
+        author="Douglas Dias Leal"
+        content="Lorem Ipsum dolor sit amet, consectet."
+      />
+
+      <Post
+        author="Douglas Dias Leal"
+        content="Lorem Ipsum eiusmod tempor incididunt ut labore et. Lorem Ipsum eiusmod tempor incididunt ut labore et"
+      />
     </div>
   )
 }
