@@ -42,3 +42,13 @@ n install lts
 ```sh
 npm create vite@latest
 ```
+Install the dependencies
+```sh
+npm i
+```
+Execute the project
+```sh
+npm run dev
+```
+
+
