@@ -53,3 +53,20 @@ npm run dev
 
 ## Google Fonts
 [Roboto](https://fonts.google.com/specimen/Roboto)
+
+
+## VS Code Extensions
+
+- [CSS Modules](https://marketplace.visualstudio.com/items?itemName=clinyong.vscode-css-modules)
+
+## Images
+
+- [Unsplash](https://unsplash.com/)
+
+## Icons
+
+- [Phosphor Icons](https://phosphoricons.com/)
+Install
+```sh
+npm i phosphor-react
+```
