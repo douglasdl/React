@@ -15,7 +15,6 @@ export function Comment() {
                             <strong>
                                 Douglas Dias Leal
                             </strong>
-                            (você)
                             <time
                                 title="30 de Junho às 09h31" 
                                 datetime="2022-06-30 09:31:28">
@@ -23,7 +22,7 @@ export function Comment() {
                             </time>
                         </div>
                         <button title="Deletar comentário">
-                            <Trash size={20} />
+                            <Trash size={24} />
                         </button>
                     </header>
 
@@ -34,7 +33,7 @@ export function Comment() {
                 <footer>
                     <button>
                         <ThumbsUp size={20} />
-                        Aplaudir • <span>03</span>
+                        Aplaudir <span>03</span>
                     </button>
                 </footer>
             </div>
