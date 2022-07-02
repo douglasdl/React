@@ -7,7 +7,7 @@ export function Comment() {
         <div className={styles.comment}>
             <Avatar
                 hasBorder={false} 
-                src="https://github.com/douglasdl.png"
+                src="https://github.com/Akiyabank.png"
             />
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
