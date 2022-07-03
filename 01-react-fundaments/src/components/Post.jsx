@@ -10,9 +10,10 @@ import { formatDistanceToNow } from 'date-fns'
 export function Post({ author, content, publishedAt }) {
 
     const  [comments, setComments] = useState([
-        1,
-        2,
+        "Que legal!"
     ])
+
+    const [newCommentText, setNewCommentText] = useState('');
 
     const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH'h'mm", {
         locale: ptBR,
@@ -25,7 +26,13 @@ export function Post({ author, content, publishedAt }) {
 
     function handleCreateNewComment() {
         event.preventDefault()
-        setComments([...comments, comments.length + 1])
+
+        setComments([...comments, newCommentText]);
+        setNewCommentText('');
+    }
+
+    function handleNewCommentChange() {
+        setNewCommentText(event.target.value);
     }
 
     return (
@@ -77,7 +84,10 @@ export function Post({ author, content, publishedAt }) {
                 <strong>Deixe seu feedback</strong>
 
                 <textarea 
+                    name="comment"
+                    value={newCommentText}
                     placeholder='Deixe um comentário'
+                    onChange={handleNewCommentChange}
                 />
 
                 <footer>
@@ -91,7 +101,9 @@ export function Post({ author, content, publishedAt }) {
                 
                 { comments.map(comment => {
                     return (
-                        <Comment />
+                        <Comment 
+                            content={comment}
+                        />
                     )
                 })}
 
