@@ -18,7 +18,7 @@ export function Comment({ content }) {
                             </strong>
                             <time
                                 title="30 de Junho às 09h31" 
-                                datetime="2022-06-30 09:31:28">
+                                dateTime="2022-06-30 09:31:28">
                                 Cerca de 2h atrás
                             </time>
                         </div>

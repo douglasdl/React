@@ -51,7 +51,7 @@ export function Post({ author, content, publishedAt }) {
 
                 <time
                     title={publishedDateFormatted} 
-                    datetime={publishedAt.toISOString()}>
+                    dateTime={publishedAt.toISOString()}>
                     Publicado {publishedDateRelativeToNow}
                 </time>
             </header>
@@ -60,19 +60,19 @@ export function Post({ author, content, publishedAt }) {
                 { content.map(row => {
                     if(row.type === "paragraph") {
                         return (
-                            <p>
+                            <p key={row.content}>
                                 {row.content}
                             </p>
                         )
                     } else if(row.type === "link") {
                         return (
-                            <p>
+                            <p key={row.content}>
                                 <a href="">{row.content}</a>
                             </p>
                         )
                     } else if(row.type === "hashtag") {
                         return (
-                            <p>
+                            <p key={row.content}>
                                 <a href="">{row.content}</a>
                             </p>
                         )
@@ -102,6 +102,7 @@ export function Post({ author, content, publishedAt }) {
                 { comments.map(comment => {
                     return (
                         <Comment 
+                            key={comment}
                             content={comment}
                         />
                     )
