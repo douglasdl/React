@@ -2,6 +2,8 @@
 
 Check page [here](https://react-ecru-zeta.vercel.app/). 
 
+Figma [layout](https://www.figma.com/file/5rjUgceKPHymUjzB5pdzdN/Ignite-Feed-(Community)?node-id=1%3A35).
+
 # Node
 
 - [Node.js](https://nodejs.org/en/)
@@ -73,4 +75,14 @@ npm run dev
 Install
 ```sh
 npm i phosphor-react
+```
+
+## Time Format
+
+- [Intl/DateTimeFormat](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+
+- [Date FNS](https://date-fns.org)
+Install Date FNS dependencies
+```sh
+npm i data-fns
 ```

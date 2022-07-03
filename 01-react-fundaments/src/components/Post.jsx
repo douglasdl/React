@@ -1,37 +1,64 @@
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 import { Avatar } from './Avatar'
+import { format } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+import { formatDistanceToNow } from 'date-fns'
 
-export function Post(props) {
+export function Post({ author, content, publishedAt }) {
+
+    const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH'h'mm", {
+        locale: ptBR,
+    })
+
+    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+        locale: ptBR,
+        addSuffix: true,
+    })
+
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
                     <Avatar 
-                        src="https://github.com/douglasdl.png" 
+                        src={author.avatarUrl} 
                     />
                     <div className={styles.authorInfo}>
-                        <strong>Douglas Dias Leal</strong>
+                        <strong>{author.name}</strong>
                 
-                        <span>Web Developer</span>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
                 <time
-                    title="30 de Junho às 09h31" 
-                    datetime="2022-06-30 09:31:28">
-                    Publicado há 1h 
+                    title={publishedDateFormatted} 
+                    datetime={publishedAt.toISOString()}>
+                    Publicado {publishedDateRelativeToNow}
                 </time>
             </header>
 
             <div className={styles.content}>
-                <p>Fala galeraa 👋</p>
-
-                <p>Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-
-                <p>👉 <a href="">douglas.design/doctorcare</a></p>
-
-                <p><a href="">#novoprojeto</a> <a href="">#nlw</a> <a href="">#rocketseat</a></p>
+                { content.map(row => {
+                    if(row.type === "paragraph") {
+                        return (
+                            <p>
+                                {row.content}
+                            </p>
+                        )
+                    } else if(row.type === "link") {
+                        return (
+                            <p>
+                                <a href="">{row.content}</a>
+                            </p>
+                        )
+                    } else if(row.type === "hashtag") {
+                        return (
+                            <p>
+                                <a href="">{row.content}</a>
+                            </p>
+                        )
+                    }
+                }) }
             </div>
 
             <form className={styles.commentForm}>
