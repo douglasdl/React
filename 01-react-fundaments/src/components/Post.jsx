@@ -35,6 +35,10 @@ export function Post({ author, content, publishedAt }) {
         setNewCommentText(event.target.value);
     }
 
+    function deleteComment(comment) {
+        alert(`Deletar (Post) comentário ${comment}`)
+    }
+
     return (
         <article className={styles.post}>
             <header>
@@ -104,6 +108,7 @@ export function Post({ author, content, publishedAt }) {
                         <Comment 
                             key={comment}
                             content={comment}
+                            onDeleteComment={deleteComment}
                         />
                     )
                 })}
