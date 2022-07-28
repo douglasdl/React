@@ -90,3 +90,15 @@ npm i data-fns
 ## Browser Extension
 
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+
+
+
+## Timer
+
+- [Layout](https://www.figma.com/file/tA807DAy4ZqnlLNNvNu6tx/Ignite-Timer-(Community)?node-id=0%3A1)
+
+[Styled Components]()
+```sh
+npm i styled-components
+npm i @types/styled-components -D
+```
