@@ -102,3 +102,27 @@ npm i data-fns
 npm i styled-components
 npm i @types/styled-components -D
 ```
+
+### VS Code Extensions
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+```sh
+npm i eslint -D
+npm i @rocketseat/eslint-config -D
+```
+
+Create a new Eslint configuration
+```sh
+npx eslint --init
+```
+
+Check the errors
+```sh
+npx eslint src --ext .ts,.tsx
+```
+
+Fix all errors
+```sh
+npx eslint src --ext .ts,.tsx --fix
+```
