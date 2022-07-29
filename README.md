@@ -126,3 +126,9 @@ Fix all errors
 ```sh
 npx eslint src --ext .ts,.tsx --fix
 ```
+
+### Routes
+[React Router](https://github.com/remix-run/react-router)
+```sh
+npm i react-router-dom
+```
