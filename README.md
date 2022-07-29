@@ -55,6 +55,7 @@ npm i
 Execute the project
 ```sh
 npm run dev
+npm run dev -- --host
 ```
 
 ## Google Fonts
@@ -131,4 +132,19 @@ npx eslint src --ext .ts,.tsx --fix
 [React Router](https://github.com/remix-run/react-router)
 ```sh
 npm i react-router-dom
+```
+
+### Forms
+[React Hook Form](https://react-hook-form.com/)
+```sh
+npm i react-hook-form
+```
+
+### Form Validation Libraries
+[Yup](https://github.com/jquense/yup)
+[Joi](https://github.com/sideway/joi)
+[Zod](https://github.com/colinhacks/zod)
+```sh
+npm i zod
+npm i @hookform/resolvers
 ```
