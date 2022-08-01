@@ -148,3 +148,10 @@ npm i react-hook-form
 npm i zod
 npm i @hookform/resolvers
 ```
+
+### Date
+
+[Date FNS](https://date-fns.org/)
+```sh
+npm i date-fns
+```
